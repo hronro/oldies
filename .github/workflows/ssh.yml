@@ -1,0 +1,15 @@
+name: SSH
+
+on:
+  push:
+    branches:
+      - gh-ssh
+
+env:
+  MACOSX_DEPLOYMENT_TARGET: 10.13
+
+jobs:
+  ssh:
+    runs-on: macos-13
+    steps:
+      - uses: mxschmitt/action-tmate@v3
